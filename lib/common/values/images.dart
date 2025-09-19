@@ -5,12 +5,15 @@ class AssetsImages {
   static const chuxing1Png = 'assets/images/chuxing1.png';
   static const dingdanPng = 'assets/images/dingdan.png';
   static const dingdan1Png = 'assets/images/dingdan1.png';
+  static const kuanPng = 'assets/images/kuan.png';
   static const logoPng = 'assets/images/logo.png';
   static const mianrongPng = 'assets/images/mianrong.png';
   static const qicheyulanPng = 'assets/images/qicheyulan.png';
   static const shuanianyanzhengPng = 'assets/images/shuanianyanzheng.png';
+  static const wenxingtishiPng = 'assets/images/wenxingtishi.png';
   static const wodePng = 'assets/images/wode.png';
   static const wode1Png = 'assets/images/wode1.png';
   static const xiaoxiPng = 'assets/images/xiaoxi.png';
   static const xiaoxi1Png = 'assets/images/xiaoxi1.png';
+  static const zhanwuchechiPng = 'assets/images/zhanwuchechi.png';
 }

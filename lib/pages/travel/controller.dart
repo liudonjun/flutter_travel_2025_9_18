@@ -1,3 +1,4 @@
+import 'package:flutter_travel/common/index.dart';
 import 'package:get/get.dart';
 
 class TravelController extends GetxController {
@@ -74,8 +75,7 @@ class TravelController extends GetxController {
   }
 
   void onSearchTickets() {
-    // TODO: 查询车票
-    Get.snackbar('查询', '正在查询车票...');
+    Get.toNamed(RouteNames.selectTicket);
   }
 
   void onClearHistory() {

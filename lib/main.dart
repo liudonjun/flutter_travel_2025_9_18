@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           footerTriggerDistance: 150,
           child: GetMaterialApp(
             title: 'flutter_travel',
-            initialRoute: RouteNames.login,
+            initialRoute: RouteNames.main,
             debugShowCheckedModeBanner: false,
             getPages: RoutePages.list,
             defaultTransition: Transition.cupertino,
