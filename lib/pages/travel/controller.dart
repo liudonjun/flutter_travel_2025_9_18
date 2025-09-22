@@ -42,6 +42,10 @@ class TravelController extends GetxController {
   }
 
   void onTicketTypeChanged(int index) {
+    if (index == 1) {
+      Get.toNamed(RouteNames.flightMain);
+      return;
+    }
     selectedTicketType.value = index;
   }
 

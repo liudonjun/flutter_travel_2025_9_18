@@ -8,4 +8,9 @@ class RouteNames {
   static const selectTime = '/selectTime';
   static const ticketDetail = '/ticketDetail';
   static const addTicketData = '/addTicketData';
+  static const submitOrder = '/submitOrder';
+  static const orderDetail = '/orderDetail';
+  static const flightMain = '/flightMain';
+  static const flightSelectCity = '/flightSelectCity';
+  static const flightPredict = '/flightPredict';
 }

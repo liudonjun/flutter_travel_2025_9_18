@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_travel/common/services/config.dart';
+import 'package:flutter_travel/common/utils/storage.dart';
 import 'package:get/get.dart';
 
 class Global {
@@ -8,6 +10,12 @@ class Global {
 
     // 系统样式
     setSystemUi();
+
+    // 工具类
+    await Storage().init();
+
+    // 初始化服务，Get.put 方式直接注入
+    Get.put<ConfigService>(ConfigService());
   }
 
   // 系统样式

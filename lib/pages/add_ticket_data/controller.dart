@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel/common/index.dart';
 import 'package:get/get.dart';
 
 class AddTicketDataController extends GetxController {
@@ -106,7 +107,7 @@ class AddTicketDataController extends GetxController {
   }
 
   void submitOrder() {
-    Get.snackbar('提交订单', '订单提交成功');
+    Get.toNamed(RouteNames.submitOrder);
   }
 
   @override

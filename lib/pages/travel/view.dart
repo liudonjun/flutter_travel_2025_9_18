@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_travel/common/i18n/index.dart';
 import 'package:flutter_travel/common/index.dart';
 import 'package:get/get.dart';
 
@@ -45,7 +46,7 @@ class TravelPage extends GetView<TravelController> {
                   Row(
                     children: [
                       Text(
-                        '大连',
+                        LocaleKeys.travelCurrentLocation.tr,
                         style: TextStyle(
                           color: HexColor('#181818'),
                           fontSize: 32.sp,
@@ -62,7 +63,7 @@ class TravelPage extends GetView<TravelController> {
                     ],
                   ),
                   Text(
-                    '晴 22°C',
+                    '${LocaleKeys.travelWeatherSunny.tr} ${LocaleKeys.travelTemperature.tr}',
                     style: TextStyle(
                       color: HexColor('#999999'),
                       fontSize: 24.sp,
@@ -104,7 +105,11 @@ class TravelPage extends GetView<TravelController> {
 
   // 构建票类选择标签
   Widget _buildTicketTypeTabs() {
-    final ticketTypes = ['火车票', '飞机票', '汽车票'];
+    final ticketTypes = [
+      LocaleKeys.travelTrainTicket.tr,
+      LocaleKeys.travelFlightTicket.tr,
+      LocaleKeys.travelBusTicket.tr,
+    ];
     final ticketIcons = [
       AssetsSvgs.huochepiaoSvg,
       AssetsSvgs.feijipiaoSvg,
@@ -119,9 +124,12 @@ class TravelPage extends GetView<TravelController> {
       ),
       margin: EdgeInsets.symmetric(horizontal: 40.w),
       child: Row(
-        children: List.generate(ticketTypes.length, (index) {
-          return Expanded(
-            child: Obx(() => GestureDetector(
+        children: List.generate(
+          ticketTypes.length,
+          (index) {
+            return Expanded(
+              child: Obx(
+                () => GestureDetector(
                   onTap: () => controller.onTicketTypeChanged(index),
                   child: Container(
                     decoration: BoxDecoration(
@@ -163,9 +171,11 @@ class TravelPage extends GetView<TravelController> {
                       ],
                     ),
                   ),
-                )),
-          );
-        }),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -196,7 +206,7 @@ class TravelPage extends GetView<TravelController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '出发',
+                      LocaleKeys.travelDeparture.tr,
                       style: TextStyle(
                         color: HexColor('#999999'),
                         fontSize: 24.sp,
@@ -243,7 +253,7 @@ class TravelPage extends GetView<TravelController> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '到达',
+                      LocaleKeys.travelArrival.tr,
                       style: TextStyle(
                         color: HexColor('#999999'),
                         fontSize: 24.sp,
@@ -291,7 +301,7 @@ class TravelPage extends GetView<TravelController> {
                 width: 20.w,
               ),
               Text(
-                '今天',
+                LocaleKeys.travelToday.tr,
                 style: TextStyle(fontSize: 28.sp, color: HexColor('#999999')),
               ),
             ],
@@ -320,7 +330,7 @@ class TravelPage extends GetView<TravelController> {
                     width: 20.w,
                   ),
                   Text(
-                    '学生票',
+                    LocaleKeys.travelStudentTicket.tr,
                     style:
                         TextStyle(fontSize: 28.sp, color: HexColor('#999999')),
                   ),
@@ -335,7 +345,7 @@ class TravelPage extends GetView<TravelController> {
                       HexColor('#14B2B5').withOpacity(0.1),
                     ])),
                     child: Text(
-                      '学生票须知',
+                      LocaleKeys.travelStudentNotice.tr,
                       style: TextStyle(
                           fontSize: 20.sp, color: HexColor('#14B2B5')),
                     ),
@@ -353,7 +363,7 @@ class TravelPage extends GetView<TravelController> {
                     width: 20.w,
                   ),
                   Text(
-                    '高铁/动车',
+                    LocaleKeys.travelHighSpeedTrain.tr,
                     style: TextStyle(
                       fontSize: 28.sp,
                       color: HexColor('#181818'),
@@ -403,7 +413,7 @@ class TravelPage extends GetView<TravelController> {
                     width: 10.w,
                   ),
                   Text(
-                    '清除历史',
+                    LocaleKeys.travelClearHistory.tr,
                     style: TextStyle(
                       fontSize: 28.sp,
                       color: HexColor('#656565'),
@@ -433,7 +443,7 @@ class TravelPage extends GetView<TravelController> {
           ),
           child: Center(
             child: Text(
-              '查询车票',
+              LocaleKeys.travelSearchTickets.tr,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 32.sp,
@@ -490,7 +500,7 @@ class TravelPage extends GetView<TravelController> {
                             Row(
                               children: [
                                 Text(
-                                  '本人行程：',
+                                  LocaleKeys.travelMyTrip.tr,
                                   style: TextStyle(
                                     color: HexColor('#999999'),
                                     fontSize: 24.sp,
@@ -520,7 +530,7 @@ class TravelPage extends GetView<TravelController> {
                             Row(
                               children: [
                                 Text(
-                                  '出发时间：',
+                                  LocaleKeys.travelDepartureTime.tr,
                                   style: TextStyle(
                                     color: HexColor('#999999'),
                                     fontSize: 24.sp,
@@ -542,7 +552,7 @@ class TravelPage extends GetView<TravelController> {
                       Row(
                         children: [
                           Text(
-                            '车票详情',
+                            LocaleKeys.travelTicketDetails.tr,
                             style: TextStyle(
                               color: HexColor('#999999'),
                               fontSize: 24.sp,
@@ -593,7 +603,7 @@ class TravelPage extends GetView<TravelController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '接驿专车',
+                  LocaleKeys.travelTransferService.tr,
                   style: TextStyle(
                     color: HexColor('#333333'),
                     fontSize: 32.sp,
@@ -602,7 +612,7 @@ class TravelPage extends GetView<TravelController> {
                 ),
                 SizedBox(height: 8.h),
                 Text(
-                  '火车站/机场接送，安全便捷',
+                  LocaleKeys.travelTransferDescription.tr,
                   style: TextStyle(
                     color: HexColor('#666666'),
                     fontSize: 24.sp,
@@ -620,7 +630,7 @@ class TravelPage extends GetView<TravelController> {
                 borderRadius: BorderRadius.circular(24.r),
               ),
               child: Text(
-                '预订',
+                LocaleKeys.travelBook.tr,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 28.sp,

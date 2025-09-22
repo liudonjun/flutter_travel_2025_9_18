@@ -1,11 +1,16 @@
 import 'package:flutter_travel/common/index.dart';
+import 'package:flutter_travel/pages/flight/flight_main/index.dart';
+import 'package:flutter_travel/pages/flight/flight_select_city/index.dart';
 import 'package:flutter_travel/pages/index.dart';
+import 'package:flutter_travel/pages/submit_order/index.dart';
 import 'package:get/get.dart';
 
 import '../../pages/add_ticket_data/index.dart';
 import '../../pages/face_auth/index.dart';
 import '../../pages/face_login/index.dart';
+import '../../pages/flight/flight_predict/index.dart';
 import '../../pages/login/index.dart';
+import '../../pages/order_detail/index.dart';
 import '../../pages/register/index.dart';
 import '../../pages/select_ticket/index.dart';
 import '../../pages/select_time/index.dart';
@@ -51,6 +56,26 @@ class RoutePages {
     GetPage(
       name: RouteNames.addTicketData,
       page: () => const AddTicketDataPage(),
+    ),
+    GetPage(
+      name: RouteNames.submitOrder,
+      page: () => const SubmitOrderPage(),
+    ),
+    GetPage(
+      name: RouteNames.orderDetail,
+      page: () => const OrderDetailPage(),
+    ),
+    GetPage(
+      name: RouteNames.flightMain,
+      page: () => const FlightMainPage(),
+    ),
+    GetPage(
+      name: RouteNames.flightSelectCity,
+      page: () => const FlightSelectCityPage(),
+    ),
+    GetPage(
+      name: RouteNames.flightPredict,
+      page: () => const FlightPredictPage(),
     ),
   ];
 }

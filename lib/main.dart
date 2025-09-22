@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_travel/common/i18n/index.dart';
 import 'package:flutter_travel/common/index.dart';
+import 'package:flutter_travel/common/services/config.dart';
 import 'package:flutter_travel/init.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -41,6 +43,11 @@ class MyApp extends StatelessWidget {
             initialRoute: RouteNames.main,
             debugShowCheckedModeBanner: false,
             getPages: RoutePages.list,
+            translations: Translation(),
+            localizationsDelegates: Translation.localizationsDelegates,
+            supportedLocales: Translation.supportedLocales,
+            locale: ConfigService.to.locale,
+            fallbackLocale: Translation.fallbackLocale,
             defaultTransition: Transition.cupertino,
             builder: (context, widget) {
               widget = EasyLoading.init()(context, widget);
