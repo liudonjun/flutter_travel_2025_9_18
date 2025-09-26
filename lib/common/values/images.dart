@@ -16,11 +16,23 @@ class AssetsImages {
   static const flightXiaoxi1Png = 'assets/images/flight_xiaoxi1.png';
   static const flightZhuizhongPng = 'assets/images/flight_zhuizhong.png';
   static const flightZhuizhong1Png = 'assets/images/flight_zhuizhong1.png';
+  static const hotelLogoPng = 'assets/images/hotel_logo.png';
   static const kuanPng = 'assets/images/kuan.png';
   static const logoPng = 'assets/images/logo.png';
   static const mianrongPng = 'assets/images/mianrong.png';
   static const qicheyulanPng = 'assets/images/qicheyulan.png';
   static const shuanianyanzhengPng = 'assets/images/shuanianyanzheng.png';
+  static const tabHotelHomePng = 'assets/images/tab_hotel_home.png';
+  static const tabHotelHomeActivePng =
+      'assets/images/tab_hotel_home_active.png';
+  static const tabHotelMinePng = 'assets/images/tab_hotel_mine.png';
+  static const tabHotelMineActivePng =
+      'assets/images/tab_hotel_mine_active.png';
+  static const tabHotelMsgPng = 'assets/images/tab_hotel_msg.png';
+  static const tabHotelMsgActivePng = 'assets/images/tab_hotel_msg_active.png';
+  static const tabHotelReservePng = 'assets/images/tab_hotel_reserve.png';
+  static const tabHotelReserveActivePng =
+      'assets/images/tab_hotel_reserve_active.png';
   static const wenxingtishiPng = 'assets/images/wenxingtishi.png';
   static const wodePng = 'assets/images/wode.png';
   static const wode1Png = 'assets/images/wode1.png';
